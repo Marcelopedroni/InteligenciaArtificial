@@ -4,3 +4,5 @@
 
 <li>Aula 01 - Introdução à Inteligência Artificial
 <br><li>Aula 02 - Listas de Recomendações
+<br><li>Aula 03 - Resolução da lista
+<br><li>Aula 04 - Sistemas de Busca
