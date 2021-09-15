@@ -4,7 +4,7 @@ class Profundidade:
         self.inicio = inicio
         self.inicio.visitado = True
         self.objetivo = objetivo
-        self.fronteira = Pilha(20)
+        self.fronteira = Pilha(3)
         self.fronteira.empilhar(inicio)
         
     def buscar(self):
@@ -27,3 +27,4 @@ from mapa import Mapa
 mapa = Mapa()
 profundidade = Profundidade(mapa.portoUniao, mapa.curitiba)
 profundidade.buscar()
+
