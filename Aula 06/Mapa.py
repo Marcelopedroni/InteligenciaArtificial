@@ -22,7 +22,7 @@ class Mapa:
 
     portoUniao.addCidadeAdjacente(Adjacente(pauloFrontin, 46))  
     portoUniao.addCidadeAdjacente(Adjacente(canoinhas, 78))
-    portoUniao.addCidadeAdjacente(Adjacente(saoMateus, 87))
+    portoUniao.addCidadeAdjacente(Adjacente(saoMateus, 870))
        
     pauloFrontin.addCidadeAdjacente(Adjacente(portoUniao, 46))
     pauloFrontin.addCidadeAdjacente(Adjacente(irati, 75))
@@ -77,7 +77,7 @@ class Mapa:
     saoMateus.addCidadeAdjacente(Adjacente(irati, 57))
     saoMateus.addCidadeAdjacente(Adjacente(lapa, 60))
     saoMateus.addCidadeAdjacente(Adjacente(tresBarras, 43))
-    saoMateus.addCidadeAdjacente(Adjacente(portoUniao, 87))
+    saoMateus.addCidadeAdjacente(Adjacente(portoUniao, 870))
     
     tresBarras.addCidadeAdjacente(Adjacente(saoMateus, 43))
     tresBarras.addCidadeAdjacente(Adjacente(canoinhas, 12))
