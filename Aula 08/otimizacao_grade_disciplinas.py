@@ -2,46 +2,46 @@ import time
 import random
 import math
 
-pessoas = [('Amanda', 'CWB'),
-           ('Pedro', 'GIG'),
-           ('Marcos', 'POA'),
-           ('Priscila', 'FLN'),
-           ('Jessica', 'CNF'),
-           ('Paulo', 'GYN')]
+aulas_atribuidas = {}
 
-destino = 'GRU'
+inicial = [3,2  , 8,9   , 1,12  , 10,14   ,  8,4]
 
-agenda = [1,4, 3,2, 0,3, 6,3, 2,4, 5,3]
+for linha in open('tab_professores.txt'):
 
-dominio = [(0,9)] * (len(pessoas) * 2)
+  valores = linha.split(',')
+  valores.pop(len(valores)-1) # retira o \n
+  
+  #print (valores)
+  _prof = int(valores.pop(0))
+  #print (_prof)
+  #print (valores)
+  _custo = int(valores.pop(0))
+  #print (_custo)
+  #print (valores)
+	
+  for i in valores:
+    aulas_atribuidas.setdefault(i, [])
+    aulas_atribuidas[i].append((_prof, _custo))
+  
+print (aulas_atribuidas)
 
-voos = {}
-for linha in open('grade_disciplina.txt'):
 
-    _professor, _disciplina, _preco = linha.split(',')
-    voos.setdefault((_origem, _destino), [])
-    voos[(_origem, _destino)].append((_saida, _chegada, int(_preco)))
-
-#print (voos)
-    
-
+'''
 def imprimir_agenda(agenda):
     id_voo = -1
     for i in range(len(agenda) // 2):
-        nome = pessoas[i][0] 
-        origem = pessoas[i][1]
+        professor = pessoas[i][0] 
+        disciplina = pessoas[i][1]
         id_voo += 1
-        ida = voos[(origem, destino)][agenda[id_voo]]
+        ida = disciplinas[(professor, disciplina)][agenda[id_voo]]
         id_voo += 1
-        volta = voos[(destino, origem)][agenda[id_voo]]
-        print('%10s%10s %5s-%5s R$%3s %5s-%5s R$%3s' % (nome, origem, ida[0], ida[1], ida[2],
-                                                       volta[0], volta[1], volta[2]))
         
+        print('%10s%10s %5s-%5s R$%3s ' % (nome, origem, ida[0], ida[1], ida[2]))
+        
+print('imprimindo agenda sem otimização...')
+imprimir_agenda(agenda)
 
-#print('imprimindo agenda sem otimização...')
-#imprimir_agenda(agenda)
-
-#print ('fim da impressão da agenda sem otimização...')
+print ('fim da impressão da agenda sem otimização...')
 
 def get_minutos(hora):
     x = time.strptime(hora, '%H:%M')
@@ -171,26 +171,4 @@ print(funcao_custo(solucao_genetico))
 #print('solucao:')
 #print(solucao_genetico)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+'''

@@ -32,12 +32,13 @@ def imprimir_agenda(agenda):
         origem = pessoas[i][1]
         id_voo += 1
         ida = voos[(origem, destino)][agenda[id_voo]]
+        print (ida)
         id_voo += 1
         volta = voos[(destino, origem)][agenda[id_voo]]
-        print('%10s%10s %5s-%5s R$%3s %5s-%5s R$%3s' % (nome, origem, ida[0], ida[1], ida[2],
-                                                       volta[0], volta[1], volta[2]))
+        #print('%10s%10s %5s-%5s R$%3s %5s-%5s R$%3s' % (nome, origem, ida[0], ida[1], ida[2],
+        #                                               volta[0], volta[1], volta[2]))
         
-
+'''
 #print('imprimindo agenda sem otimização...')
 #imprimir_agenda(agenda)
 
@@ -130,8 +131,8 @@ def cruzamento(dominio, solucao1, solucao2):
 
 
 
-def genetico(dominio, funcao_custo, tamanho_populacao = 50, passo = 1,
-             probabilidade_mutacao = 0.2, elitismo = 0.1, numero_geracoes = 1000):
+def genetico(dominio, funcao_custo, tamanho_populacao = 200, passo = 1,
+             probabilidade_mutacao = 0.2, elitismo = 0.1, numero_geracoes = 200):
     
     populacao = []
     for i in range(tamanho_populacao):
@@ -162,14 +163,14 @@ def genetico(dominio, funcao_custo, tamanho_populacao = 50, passo = 1,
 
 solucao_genetico = genetico(dominio, funcao_custo)
 custo_genetico = funcao_custo(solucao_genetico)
-#print('imprimindo agenda otimizada...')
-#imprimir_agenda(solucao_genetico)
-#print('...com custo inicial total de:')
-#print(funcao_custo(agenda))
-#print('...com custo total de:')
+print('imprimindo agenda otimizada...')
+imprimir_agenda(solucao_genetico)
+print('...com custo inicial total de:')
+print(funcao_custo(agenda))
+print('...com custo total de:')
 print(funcao_custo(solucao_genetico))
-#print('solucao:')
-#print(solucao_genetico)
+print('solucao:')
+print(solucao_genetico)
 
 
 
@@ -180,7 +181,7 @@ print(funcao_custo(solucao_genetico))
 
 
 
-
+'''
 
 
 
