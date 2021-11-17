@@ -38,9 +38,9 @@ def imprimir_agenda(agenda):
         #print('%10s%10s %5s-%5s R$%3s %5s-%5s R$%3s' % (nome, origem, ida[0], ida[1], ida[2],
         #                                               volta[0], volta[1], volta[2]))
         
-'''
+
 #print('imprimindo agenda sem otimização...')
-#imprimir_agenda(agenda)
+imprimir_agenda(agenda)
 
 #print ('fim da impressão da agenda sem otimização...')
 
@@ -127,10 +127,6 @@ def cruzamento(dominio, solucao1, solucao2):
     return solucao1[0:i] + solucao2[i:]
 
 
-
-
-
-
 def genetico(dominio, funcao_custo, tamanho_populacao = 200, passo = 1,
              probabilidade_mutacao = 0.2, elitismo = 0.1, numero_geracoes = 200):
     
@@ -171,27 +167,3 @@ print('...com custo total de:')
 print(funcao_custo(solucao_genetico))
 print('solucao:')
 print(solucao_genetico)
-
-
-
-
-
-
-
-
-
-
-'''
-
-
-
-
-
-
-
-
-
-
-
-
-    
